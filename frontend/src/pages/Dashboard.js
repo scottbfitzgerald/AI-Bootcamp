@@ -16,6 +16,7 @@ const Dashboard = () => {
     } else {
       setLoading(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   const fetchSubscriptionStatus = async () => {

@@ -9,11 +9,11 @@ const PostDetail = () => {
   const [error, setError] = useState('');
 
   const { id } = useParams();
-  const { user } = useAuth();
   const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
   useEffect(() => {
     fetchPost();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const fetchPost = async () => {
