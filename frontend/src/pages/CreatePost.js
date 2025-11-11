@@ -53,7 +53,7 @@ const CreatePost = () => {
         tags: tags.split(',').map(tag => tag.trim()).filter(tag => tag)
       };
 
-      const response = await axios.post(`${API_URL}/posts/create`, postData);
+      const response = await axios.post(`${API_URL}/posts`, postData);
       const postId = response.data.post._id;
 
       // Upload files if any
